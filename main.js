@@ -11,13 +11,21 @@ const jwt = require('jsonwebtoken')
 const port = 3000;
 const sk = "inven@173"
 app.use(cookieParser());
-let connection = mysql.createConnection({
-  host: 'dpg-cslnu1rtq21c73em2o50-a',
-  user: 'root',
-  password: 'i45iY4acxGLnYFCxBf1xdAjm62JoJHNh',
-  port:5432,
-  database: 'inventrack_db'
-})
+// let connection = mysql.createConnection({
+//   host: 'dpg-cslnu1rtq21c73em2o50-a',
+//   user: 'root',
+//   password: 'i45iY4acxGLnYFCxBf1xdAjm62JoJHNh',
+//   port:5432,
+//   database: 'inventrack_db'
+// })
+
+const connection = mysql.createConnection({
+  host: process.env.DB_HOST,       // Aiven MySQL host
+  user: process.env.DB_USER,       // Aiven MySQL username
+  password: process.env.DB_PASSWORD, // Aiven MySQL password
+  database: process.env.DB_NAME ,   // Aiven MySQL database name
+  port: process.env.DB_PORT    // Aiven MySQL database name
+});
 
 app.use('/dashboard', dash)
 
