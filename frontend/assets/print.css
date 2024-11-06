@@ -1,0 +1,8 @@
+@media print {
+
+    header,
+    #options,
+    #nav , .crud {
+      display: none !important;
+    }
+  }
