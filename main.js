@@ -12,10 +12,11 @@ const port = 3000;
 const sk = "inven@173"
 app.use(cookieParser());
 let connection = mysql.createConnection({
-  host: 'localhost',
+  host: 'dpg-cslnu1rtq21c73em2o50-a',
   user: 'root',
-  password: 'root',
-  database: 'inventrackDB'
+  password: 'i45iY4acxGLnYFCxBf1xdAjm62JoJHNh',
+  port:5432,
+  database: 'inventrack_db'
 })
 
 app.use('/dashboard', dash)

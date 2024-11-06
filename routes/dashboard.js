@@ -7,10 +7,11 @@ const secretKey = 'inven@173';
 const backendPath = path.join(__dirname, '..'); // .. is used to go back to the parent folder 
 const mysql = require('mysql2')
 let connection = mysql.createConnection({
-    host: 'localhost',
+    host: 'dpg-cslnu1rtq21c73em2o50-a',
     user: 'root',
-    password: 'root',
-    database: 'inventrackDB'
+    password: 'i45iY4acxGLnYFCxBf1xdAjm62JoJHNh',
+    port:5432,
+    database: 'inventrack_db'
   })
 
   connection.connect((err)=>{
