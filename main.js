@@ -127,7 +127,7 @@ app.post('/signup',async (req,res)=>{
             {
               httpOnly : true,
               secure : false,
-              maxAge: 24 * 60 * 60 * 1000, 
+              maxAge: 365 * 24 * 60 * 60 * 1000, 
             }
           ) 
           console.log(uid, "token ::: ",token)  
