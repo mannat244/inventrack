@@ -122,7 +122,7 @@ app.post('/signup',async (req,res)=>{
             return;
 
           }
-          token = jwt.sign({ email, uid, store },sk,{expiresIn: '1d'})
+          token = jwt.sign({ email, uid, store },sk,{expiresIn: '365d'})
           res.cookie('authtoken',token,
             {
               httpOnly : true,
@@ -155,6 +155,7 @@ app.get('/script.js', (req,res)=>{
 app.get('/signup', (req,res)=>{
     res.sendFile('frontend/signup.html',{root: __dirname})
 })
+
 
 
 app.get('/api/img/',async (req,res)=>{
